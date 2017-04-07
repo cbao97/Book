@@ -1,0 +1,12 @@
+D:\Code\PM\QuanLyNhaSach\BUS\bin\Debug\BUS.dll
+D:\Code\PM\QuanLyNhaSach\BUS\bin\Debug\BUS.pdb
+D:\Code\PM\QuanLyNhaSach\BUS\bin\Debug\BUS.xml
+D:\Code\PM\QuanLyNhaSach\BUS\bin\Debug\DTO.dll
+D:\Code\PM\QuanLyNhaSach\BUS\bin\Debug\DTO.pdb
+D:\Code\PM\QuanLyNhaSach\BUS\bin\Debug\DTO.xml
+D:\Code\PM\QuanLyNhaSach\BUS\obj\Debug\BUS.vbprojResolveAssemblyReference.cache
+D:\Code\PM\QuanLyNhaSach\BUS\obj\Debug\BUS.Resources.resources
+D:\Code\PM\QuanLyNhaSach\BUS\obj\Debug\BUS.vbproj.GenerateResource.Cache
+D:\Code\PM\QuanLyNhaSach\BUS\obj\Debug\BUS.dll
+D:\Code\PM\QuanLyNhaSach\BUS\obj\Debug\BUS.xml
+D:\Code\PM\QuanLyNhaSach\BUS\obj\Debug\BUS.pdb

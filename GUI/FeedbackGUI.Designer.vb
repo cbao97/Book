@@ -44,12 +44,12 @@ Partial Class Feedback
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl.MaxItemId = 1
         Me.RibbonControl.Name = "RibbonControl"
-        Me.RibbonControl.Size = New System.Drawing.Size(701, 54)
+        Me.RibbonControl.Size = New System.Drawing.Size(627, 54)
         '
         'lblHoTen
         '
         Me.lblHoTen.AutoSize = True
-        Me.lblHoTen.Location = New System.Drawing.Point(60, 112)
+        Me.lblHoTen.Location = New System.Drawing.Point(30, 78)
         Me.lblHoTen.Name = "lblHoTen"
         Me.lblHoTen.Size = New System.Drawing.Size(39, 13)
         Me.lblHoTen.TabIndex = 1
@@ -57,14 +57,14 @@ Partial Class Feedback
         '
         'txtHoTen
         '
-        Me.txtHoTen.Location = New System.Drawing.Point(147, 109)
+        Me.txtHoTen.Location = New System.Drawing.Point(117, 75)
         Me.txtHoTen.Name = "txtHoTen"
         Me.txtHoTen.Size = New System.Drawing.Size(202, 21)
         Me.txtHoTen.TabIndex = 2
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(147, 136)
+        Me.txtEmail.Location = New System.Drawing.Point(117, 102)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(202, 21)
         Me.txtEmail.TabIndex = 4
@@ -72,7 +72,7 @@ Partial Class Feedback
         'lblEmail
         '
         Me.lblEmail.AutoSize = True
-        Me.lblEmail.Location = New System.Drawing.Point(60, 139)
+        Me.lblEmail.Location = New System.Drawing.Point(30, 105)
         Me.lblEmail.Name = "lblEmail"
         Me.lblEmail.Size = New System.Drawing.Size(31, 13)
         Me.lblEmail.TabIndex = 3
@@ -80,7 +80,7 @@ Partial Class Feedback
         '
         'TxtNoiDung
         '
-        Me.TxtNoiDung.Location = New System.Drawing.Point(147, 192)
+        Me.TxtNoiDung.Location = New System.Drawing.Point(117, 158)
         Me.TxtNoiDung.Name = "TxtNoiDung"
         Me.TxtNoiDung.Size = New System.Drawing.Size(452, 168)
         Me.TxtNoiDung.TabIndex = 5
@@ -89,7 +89,7 @@ Partial Class Feedback
         'lblNoiDung
         '
         Me.lblNoiDung.AutoSize = True
-        Me.lblNoiDung.Location = New System.Drawing.Point(60, 195)
+        Me.lblNoiDung.Location = New System.Drawing.Point(30, 161)
         Me.lblNoiDung.Name = "lblNoiDung"
         Me.lblNoiDung.Size = New System.Drawing.Size(50, 13)
         Me.lblNoiDung.TabIndex = 6
@@ -97,7 +97,7 @@ Partial Class Feedback
         '
         'btnGui
         '
-        Me.btnGui.Location = New System.Drawing.Point(147, 381)
+        Me.btnGui.Location = New System.Drawing.Point(117, 347)
         Me.btnGui.Name = "btnGui"
         Me.btnGui.Size = New System.Drawing.Size(75, 23)
         Me.btnGui.TabIndex = 7
@@ -106,7 +106,7 @@ Partial Class Feedback
         '
         'btnXoa
         '
-        Me.btnXoa.Location = New System.Drawing.Point(274, 381)
+        Me.btnXoa.Location = New System.Drawing.Point(244, 347)
         Me.btnXoa.Name = "btnXoa"
         Me.btnXoa.Size = New System.Drawing.Size(75, 23)
         Me.btnXoa.TabIndex = 8
@@ -115,7 +115,7 @@ Partial Class Feedback
         '
         'txtTieuDe
         '
-        Me.txtTieuDe.Location = New System.Drawing.Point(147, 165)
+        Me.txtTieuDe.Location = New System.Drawing.Point(117, 131)
         Me.txtTieuDe.Name = "txtTieuDe"
         Me.txtTieuDe.Size = New System.Drawing.Size(202, 21)
         Me.txtTieuDe.TabIndex = 11
@@ -123,7 +123,7 @@ Partial Class Feedback
         'lblTieuDe
         '
         Me.lblTieuDe.AutoSize = True
-        Me.lblTieuDe.Location = New System.Drawing.Point(60, 168)
+        Me.lblTieuDe.Location = New System.Drawing.Point(30, 134)
         Me.lblTieuDe.Name = "lblTieuDe"
         Me.lblTieuDe.Size = New System.Drawing.Size(42, 13)
         Me.lblTieuDe.TabIndex = 10
@@ -137,7 +137,7 @@ Partial Class Feedback
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(701, 444)
+        Me.ClientSize = New System.Drawing.Size(627, 407)
         Me.Controls.Add(Me.txtTieuDe)
         Me.Controls.Add(Me.lblTieuDe)
         Me.Controls.Add(Me.btnXoa)
@@ -151,6 +151,7 @@ Partial Class Feedback
         Me.Controls.Add(Me.RibbonControl)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.Name = "Feedback"
         Me.Ribbon = Me.RibbonControl
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

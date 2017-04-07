@@ -4,15 +4,19 @@ Imports System.Net.Mail
 Imports DevExpress.XtraEditors
 Public Class Feedback
 
-#Region "1.Closing Form"
+#Region "1. Closing Form"
     Private Sub Feedback_Closing(sender As Object, e As FormClosingEventArgs) Handles Me.Closing
-        Dim FormMenu As New MenuGUI 'Tạo mới form MenuGUI
-        Me.Hide() 'Ẩn form feedback
-        FormMenu.Show() ' Hiện form Menu
+        Dim KetQua As DialogResult
+        KetQua = XtraMessageBox.Show("Bạn có muốn thoát ?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If (KetQua = DialogResult.Yes) Then
+            Dim FormMenu As New MenuGUI 'Tạo mới form MenuGUI
+            Me.Hide() 'Ẩn form feedback
+            FormMenu.Show() ' Hiện form Menu
+        End If
     End Sub
 #End Region
 
-#Region "2.Gui"
+#Region "2. Gửi"
     Private Sub btnGui_Click(sender As Object, e As EventArgs) Handles btnGui.Click
         Try
             Dim Smtp_Server As New SmtpClient
@@ -36,16 +40,9 @@ Public Class Feedback
             XtraMessageBox.Show(error_t.ToString, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
-
-    Private Sub Feedback_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtEmail.Text = "Cbao97@gmail.com"
-        txtHoTen.Text = "Do Chi Bao"
-        TxtNoiDung.Text = "okey"
-        txtTieuDe.Text = "Hi"
-    End Sub
 #End Region
 
-#Region "3.Xoa"
+#Region "3. Xóa"
     Private Sub btnXoa_Click(sender As Object, e As EventArgs) Handles btnXoa.Click
         txtEmail.Clear() 'Làm trống ô Email 
         txtHoTen.Clear() 'Làm trống ô Họ tên
@@ -55,6 +52,69 @@ Public Class Feedback
 
 #End Region
 
+#Region "4. Load"
+    Private Sub Feedback_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Tạo ví dụ
+        txtEmail.Text = "ViDu@gmail.com"
+        txtHoTen.Text = "Nguyen Van A"
+        TxtNoiDung.Text = "Miêu tả chi tiết"
+        txtTieuDe.Text = "Lỗi XYZ"
+        'Làm chữ màu bạc 
+        txtEmail.ForeColor = Color.Silver
+        txtHoTen.ForeColor = Color.Silver
+        TxtNoiDung.ForeColor = Color.Silver
+        txtTieuDe.ForeColor = Color.Silver
+    End Sub
+
+#End Region
+
+#Region "5. Click chuột vào textbox"
+#Region "5.1 Họ tên"
+    Private Sub txtHoTen_MouseClick(sender As Object, e As MouseEventArgs) Handles txtHoTen.MouseClick
+        txtHoTen.Clear()
+        txtHoTen.ForeColor = Color.Black
+        txtHoTen.Focus()
+    End Sub
+#End Region
+
+#Region "5.2 Email"
+    Private Sub txtEmail_MouseClick(sender As Object, e As MouseEventArgs) Handles txtEmail.MouseClick
+        txtEmail.Clear()
+        txtEmail.ForeColor = Color.Black
+        txtEmail.Focus()
+    End Sub
+
+#End Region
+
+#Region "5.3 Tiêu đề"
+    Private Sub txtTieuDe_MouseClick(sender As Object, e As MouseEventArgs) Handles txtTieuDe.MouseClick
+        txtTieuDe.Clear()
+        txtTieuDe.ForeColor = Color.Black
+        txtTieuDe.Focus()
+    End Sub
+#End Region
+
+#Region "5.4 Nội dung"
+    Private Sub TxtNoiDung_MouseClick(sender As Object, e As MouseEventArgs) Handles TxtNoiDung.MouseClick
+        TxtNoiDung.Clear()
+        TxtNoiDung.ForeColor = Color.Black
+        TxtNoiDung.Focus()
+    End Sub
 
 
+#End Region
+
+#End Region
+
+#Region "6.Phím tắt"
+    Private Sub Feedback_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If (e.Alt = True And e.KeyCode = Keys.F4) Then
+            Dim KetQua As DialogResult
+            KetQua = XtraMessageBox.Show("Bạn có muốn thoát ?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If (KetQua = DialogResult.Yes) Then
+                Me.Close()
+            End If
+        End If
+    End Sub
+#End Region
 End Class
